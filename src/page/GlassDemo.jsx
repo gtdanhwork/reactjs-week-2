@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 
 const GlassDemo = () => {
 	const [glass, setGlass] = useState({
-		
+		id: '',
+		alt: '',
+		desc: '',
+		url: '',
+		price: '',
 	});
 
 	return (
@@ -17,11 +21,12 @@ const GlassDemo = () => {
 							id="modelLeft"
 						/>
 						<img
-							className="img-fluid position-absolute"
+							className="img-fluid overlayGlasses position-absolute"
 							src="./glassesImage/v4.png"
 							alt="Glass Demo"
-							id="overlayGlasses"
+							id=""
 						/>
+						<div className="glassInfo position-absolute"></div>
 					</div>
 					<div className="col-3">
 						<img
@@ -36,63 +41,63 @@ const GlassDemo = () => {
 				<div className="row justify-content-center">
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g1.jpg"
 							alt="Glass 1"
 						/>
 					</div>
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g2.jpg"
 							alt="Glass 2"
 						/>
 					</div>
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g3.jpg"
 							alt="Glass 3"
 						/>
 					</div>
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g4.jpg"
 							alt="Glass 4"
 						/>
 					</div>
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g5.jpg"
 							alt="Glass 5"
 						/>
 					</div>
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g6.jpg"
 							alt="Glass 6"
 						/>
 					</div>
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g7.jpg"
 							alt="Glass 7"
 						/>
 					</div>
-					<div className="col-2 m-2 align-content-center">
+					<div className="col-2 m-2 align-content-center ">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g8.jpg"
 							alt="Glass 8"
 						/>
 					</div>
 					<div className="col-2 m-2 align-content-center">
 						<img
-							className="img-fluid"
+							className="img-fluid glassesShow"
 							src="./glassesImage/g9.jpg"
 							alt="Glass 9"
 						/>

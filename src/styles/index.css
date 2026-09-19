@@ -9,8 +9,12 @@ body {
     background-position: center;
 }
 
-#overlayGlasses {
+.overlayGlasses {
     top: 25%;
     left: 23.5%;
     width: 53%;
+}
+
+.glassesShow::hover {
+    cursor: pointer;
 }
