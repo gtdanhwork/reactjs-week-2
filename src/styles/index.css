@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+
+.glassDemo {
+    min-height: 100vh;
+    background-image: url("/glassesImage/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#overlayGlasses {
+    top: 25%;
+    left: 23.5%;
+    width: 53%;
+}
