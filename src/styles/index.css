@@ -15,6 +15,6 @@ body {
     width: 53%;
 }
 
-.glassesShow::hover {
+.glassesShow:hover {
     cursor: pointer;
 }
