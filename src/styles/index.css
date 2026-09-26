@@ -18,3 +18,8 @@ body {
 .glassesShow:hover {
     cursor: pointer;
 }
+
+.glassInfo {
+    bottom: 0;
+    left: 0;
+}

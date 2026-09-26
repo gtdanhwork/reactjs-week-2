@@ -1,19 +1,95 @@
 import React, { useState } from 'react';
 
+const glassData = [
+	{
+		id: 1,
+		price: 30,
+		name: 'GUCCI G8850U',
+		url: './glassesImage/v1.png',
+		demoUrl: './glassesImage/g1.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 2,
+		price: 50,
+		name: 'GUCCI G8759H',
+		url: './glassesImage/v2.png',
+		demoUrl: './glassesImage/g2.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 3,
+		price: 30,
+		name: 'DIOR D6700HQ',
+		url: './glassesImage/v3.png',
+		demoUrl: './glassesImage/g3.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 4,
+		price: 70,
+		name: 'DIOR D6005U',
+		url: './glassesImage/v4.png',
+		demoUrl: './glassesImage/g4.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 5,
+		price: 40,
+		name: 'PRADA P8750',
+		url: './glassesImage/v5.png',
+		demoUrl: './glassesImage/g5.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 6,
+		price: 60,
+		name: 'PRADA P9700',
+		url: './glassesImage/v6.png',
+		demoUrl: './glassesImage/g6.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 7,
+		price: 80,
+		name: 'FENDI F8750',
+		url: './glassesImage/v7.png',
+		demoUrl: './glassesImage/g7.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 8,
+		price: 100,
+		name: 'FENDI F8500',
+		url: './glassesImage/v8.png',
+		demoUrl: './glassesImage/g8.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+	{
+		id: 9,
+		price: 60,
+		name: 'FENDI F4300',
+		url: './glassesImage/v9.png',
+		demoUrl: './glassesImage/g9.jpg',
+		desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ',
+	},
+];
+
 const GlassDemo = () => {
 	const [glass, setGlass] = useState({
 		id: '',
-		alt: '',
+		name: '',
 		desc: '',
 		url: '',
+		demoUrl: '',
 		price: '',
 	});
 
 	return (
 		<div className="glassDemo">
-			<div className="container modelDemo">
-				<div className="row justify-content-between">
-					<div className="col-3 position-relative">
+			<div className="container w-100 mx-auto modelDemo">
+				<div className="row justify-content-center">
+					<div className="col-4 position-relative">
 						<img
 							className="img-fluid position-relative"
 							src="./glassesImage/model.jpg"
@@ -22,86 +98,37 @@ const GlassDemo = () => {
 						/>
 						<img
 							className="img-fluid overlayGlasses position-absolute"
-							src="./glassesImage/v4.png"
-							alt="Glass Demo"
-							id=""
+							src={glass.url}
+							alt={glass.name}
+							id={glass.id}
 						/>
-						<div className="glassInfo position-absolute"></div>
-					</div>
-					<div className="col-3">
-						<img
-							className="img-fluid"
-							src="./glassesImage/model.jpg"
-							alt="modelRight"
-						/>
+						<div
+							className={`glassInfo bg-success text-white p-2 rounded-2 position-absolute ${glass.id !== '' ? `` : `d-none`}`}
+						>
+							<h4>{glass.name}</h4>
+							<p>{glass.desc}</p>
+							<p>Price: {glass.price}</p>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div className="container bg-white glassCatalog">
 				<div className="row justify-content-center">
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g1.jpg"
-							alt="Glass 1"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g2.jpg"
-							alt="Glass 2"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g3.jpg"
-							alt="Glass 3"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g4.jpg"
-							alt="Glass 4"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g5.jpg"
-							alt="Glass 5"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g6.jpg"
-							alt="Glass 6"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g7.jpg"
-							alt="Glass 7"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center ">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g8.jpg"
-							alt="Glass 8"
-						/>
-					</div>
-					<div className="col-2 m-2 align-content-center">
-						<img
-							className="img-fluid glassesShow"
-							src="./glassesImage/g9.jpg"
-							alt="Glass 9"
-						/>
-					</div>
+					{glassData.map((glass) => {
+						return (
+							<div
+								id={glass.id}
+								className="col-2 m-2 align-content-center"
+							>
+								<img
+									className="img-fluid glassesShow"
+									src={glass.demoUrl}
+									alt={glass.name}
+									onClick={() => setGlass(glass)}
+								/>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>
